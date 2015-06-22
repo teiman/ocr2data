@@ -1,0 +1,196 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+.label {
+ width: 100px;
+}
+
+
+.opciones {
+ margin: 8px;
+ border: 1px solid #ccc;
+ padding:4px;
+}
+
+.fr_head {
+ background-color: #ccc;
+ padding-left:4px;
+ padding-right:8px;
+}
+
+
+
+.fr_cajadivisor,.fr_cajadivisor *  {
+ font-size: 2px; height: 2px;
+}
+
+.fr_divisor{
+  border-top:1px solid #ccc
+}
+
+    #listarecons li a {
+        display: block;
+        padding: 5px 5px 5px 0.5em;
+        border-left: 10px solid #1958b7;
+        border-right: 10px solid #508fc4;
+        background-color: #2175bc;
+        color: #fff;
+        text-decoration: none;
+        width: 100%;
+        }
+
+    html>body #listarecons li a {
+        width: auto;
+        }
+
+    #listarecons li a:hover {
+        border-left: 10px solid #1c64d1;
+        border-right: 10px solid #5ba3e0;
+        background-color: #2586d7;
+        color: #fff;
+        }
+
+
+table.centrame {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.estadorecon  {
+
+ text-transform: uppercase;
+ font-weight:bold
+ padding-left: 2px;
+ padding-right: 2px;
+ width: 80px;
+ display: inline-block;
+ 
+}
+
+.estadorecon_pendiente {
+  color: orange;
+  border: 1px solid orange; 
+  padding-left:4px;
+}
+
+.estadorecon_tramitado {
+  color: green;
+  border: 1px solid green; 
+padding-left:4px;
+}
+
+table.fullpage {
+ width:100%; 
+ margin-left: 4px;
+ margin-right:4px;
+}
+
+.fila_0,.fila_0 td  {
+ background-color: #f9f9f9;
+}
+
+.fila_0 td {
+  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+}
+
+
+.fr_table {
+
+ border: 1px solid #bbe;/* borde azulado claro */
+ border: 1px solid #bbb;
+
+}
+
+
+h3.nonbreseccion {
+ 
+ font-weight:bold;
+ font-size:14px;
+ font-family: arial,verdana;
+ color: #444;
+
+  background-image: url(img/icon1.png);
+  background-repeat: no-repeat;
+  background-position: 0px 4px;
+  padding-left: 12px;
+}
+
+a {
+ color: #00e;
+}
+
+table
+{
+    border-collapse: collapse; /* 'cellspacing' equivalent */
+}
+
+table td, table th
+{
+    padding: 0; /* 'cellpadding' equivalent */
+}
+
+
+
+#containerforms table {
+  margin-left:auto;
+  margin-right: auto;
+  margin-bottom: 4px
+}
+
+
+
+td.headdato {
+  width: 200px;
+  padding:3px; 
+  background-color: #eee;
+}
+
+.datodato {
+ padding-left:6px;
+}
+
+/* -------------------------- */
+
+
+A:link {text-decoration: none}
+A:visited {text-decoration: none}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; }
+
+
+
+
+.procesoaplicacion {
+ margin-top:8px;
+ margin-bottom:8px;
+ min-width: 300px; 
+ text-align:left; 
+    background-image: url(img/go1.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    padding-left: 24px;
+}
+
+
+.opciones a {
+ display:block;
+ width: 100%;
+}
+
+
+
+.defaultoboton {
+ min-width: 90px;
+}
+

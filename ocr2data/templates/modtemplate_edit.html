@@ -1,0 +1,37 @@
+
+
+<h3 class="nonbreseccion">Modificar template</h3>
+
+
+<div id="formulario">
+
+
+<form action="modtemplates.php" method="post">
+
+<input type="hidden" name="modo" value="guardar" />
+<input type="hidden" name="template_id" value="<patTemplate:var name="template_id" modifier="html8" />" />
+
+<table border="0" class="fr_table centrame"  cellspacing='0'>
+
+<!-- head --->
+
+    <tr class="fr_heads">
+    <td class="fr_head" colspan="2">Modificar</td>    
+    </tr>
+
+<!-- /head --->
+
+<tr><td>Nombre</td><td><input type="text" name="nombre" value="<patTemplate:var name="nombre" modifier="html8" />" /></td></tr>
+<tr><td>Ancho</td><td><input type="text" name="ancho" value="<patTemplate:var name="ancho" modifier="html8" />" /></td></tr>
+<tr><td>Alto</td><td><input type="text" name="alto" value="<patTemplate:var name="alto" modifier="html8" />" /></td></tr>
+<tr><td>Dirección</td><td><input type="text" name="origen_adr" value="<patTemplate:var name="origen_adr" modifier="html8" />" /></td></tr>
+<tr><td>Ignorar ancho</td><td><input type="checkbox" name="usarancho" <patTemplate:var name="usarancho" modifier="checkbox" /> /></td></tr>
+<tr><td>Ignorar alto</td><td><input type="checkbox" name="usaralto" 
+<patTemplate:var name="usaralto" modifier="checkbox" /> /></td></tr>
+<tr><td></td><td><input type="submit" value="Guardar cambios" /></td></tr>
+</table>
+</form>
+
+
+</div>
+

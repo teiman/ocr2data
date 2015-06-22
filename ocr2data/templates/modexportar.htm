@@ -1,0 +1,29 @@
+<h3 class="nonbreseccion">Exportador/Enrutador de documentos</h1>
+
+
+
+<div class="mensaje">
+    <patTemplate:var name="mensaje"  />
+</div>
+
+
+<div id="containerforms">
+
+
+<table cellspacing='0' class='fullpage fr_table '>
+<tr><td class="headdato">Plugin activo:</td><td class="datodato"><patTemplate:var name="id" modifier="html8"/></td></tr>
+</table>
+
+
+<table  cellspacing='0' class="fullpage fr_table ">
+<tr><th colspan='2' class="fr_head">Parametros del plugin</th></tr>
+<patTemplate:tmpl name="lista">
+<tr class="fila_{NN}">
+<td class="headdato"><patTemplate:var name="system_param_title" modifier="html8" /></td>
+<td class="datodato"><patTemplate:var name="system_param_value" modifier="html8" /></td>
+</tr>
+</patTemplate:tmpl>
+
+</table>
+
+</div>

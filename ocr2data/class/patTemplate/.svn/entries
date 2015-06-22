@@ -1,0 +1,195 @@
+8
+
+dir
+480
+http://www.php-tools.net/svn/patTemplate/trunk/patTemplate
+http://www.php-tools.net/svn/patTemplate
+
+
+
+2009-10-06T13:31:59.559735Z
+480
+gerd
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+1b0777b9-a9fa-0310-a13a-be4f713c4801
+
+Modifier.php
+file
+
+
+
+
+2009-12-11T10:27:55.000000Z
+9f3dbd48ff07fd2a8db502f78e186ac9
+2004-05-25T20:38:38.000000Z
+219
+schst
+has-props
+
+TemplateCache.php
+file
+
+
+
+
+2009-12-11T10:27:55.000000Z
+f26fbcbdc304ea12971c319e5a658264
+2004-05-25T20:38:38.000000Z
+219
+schst
+has-props
+
+Function
+dir
+
+Reader.php
+file
+
+
+
+
+2009-12-11T10:27:55.000000Z
+80faa9d7870fe8f3142011d5918dd93a
+2009-10-06T13:31:59.559735Z
+480
+gerd
+has-props
+
+Dump.php
+file
+
+
+
+
+2009-12-11T10:27:55.000000Z
+1a7473eb342e7663ec5fe894a2c9461b
+2004-05-25T20:38:38.000000Z
+219
+schst
+has-props
+
+InputFilter.php
+file
+
+
+
+
+2009-12-11T10:27:55.000000Z
+7814f0e8533dd1008b749cda02e556fd
+2004-05-25T20:38:38.000000Z
+219
+schst
+has-props
+
+OutputFilter.php
+file
+
+
+
+
+2009-12-11T10:27:55.000000Z
+c7a1fa7c119d8c07d0119f981df6332e
+2004-05-25T20:38:38.000000Z
+219
+schst
+has-props
+
+Modifier
+dir
+
+TemplateCache
+dir
+
+Compiler.php
+file
+
+
+
+
+2009-12-11T10:27:55.000000Z
+d74474ed86f36366d99f0896b91e820a
+2004-05-14T16:49:34.000000Z
+206
+schst
+has-props
+
+Stat.php
+file
+
+
+
+
+2009-12-11T10:27:55.000000Z
+a637ab735a8a021b3ab7b14fe1e7bb76
+2006-02-26T12:28:19.292748Z
+423
+schst
+has-props
+
+Reader
+dir
+
+Dump
+dir
+
+InputFilter
+dir
+
+OutputFilter
+dir
+
+OutputCache.php
+file
+
+
+
+
+2009-12-11T10:27:55.000000Z
+39a57077a8496d28a3d562bdee328407
+2004-05-25T20:38:38.000000Z
+219
+schst
+has-props
+
+Stat
+dir
+
+Module.php
+file
+
+
+
+
+2009-12-11T10:27:55.000000Z
+487f006b55f5bc7760aa74f1c7336522
+2004-05-25T20:38:38.000000Z
+219
+schst
+has-props
+
+Function.php
+file
+
+
+
+
+2009-12-11T10:27:55.000000Z
+64026dc4b1d08d8708d9fb5ccc6b1dd9
+2007-05-30T15:34:37.576511Z
+454
+gerd
+has-props
+

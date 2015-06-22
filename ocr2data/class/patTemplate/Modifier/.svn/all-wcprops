@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/patTemplate/!svn/ver/476/trunk/patTemplate/Modifier
+END
+QuoteLatex.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/patTemplate/!svn/ver/355/trunk/patTemplate/Modifier/QuoteLatex.php
+END
+Wordwrapper.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/patTemplate/!svn/ver/104/trunk/patTemplate/Modifier/Wordwrapper.php
+END
+Expression.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/patTemplate/!svn/ver/330/trunk/patTemplate/Modifier/Expression.php
+END
+Numberformat.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/patTemplate/!svn/ver/421/trunk/patTemplate/Modifier/Numberformat.php
+END
+Surround.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/patTemplate/!svn/ver/297/trunk/patTemplate/Modifier/Surround.php
+END
+Calc.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/patTemplate/!svn/ver/473/trunk/patTemplate/Modifier/Calc.php
+END
+Sizeformat.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/patTemplate/!svn/ver/476/trunk/patTemplate/Modifier/Sizeformat.php
+END
+Truncate.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/patTemplate/!svn/ver/450/trunk/patTemplate/Modifier/Truncate.php
+END
+Dateformat.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/patTemplate/!svn/ver/450/trunk/patTemplate/Modifier/Dateformat.php
+END
+Reduce.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/patTemplate/!svn/ver/470/trunk/patTemplate/Modifier/Reduce.php
+END

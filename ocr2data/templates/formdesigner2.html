@@ -1,0 +1,110 @@
+
+
+<script>
+
+var Template = {"nombreObjeto":"Template"};
+
+Template.tid = {TID};
+
+Global.DireccionRetorno = '{RETORNO}';
+Global.id_comm = '{IDCOMM}';
+
+
+<patTemplate:tmpl name="jsformdesigner" src="js_formdesigner.js" autoload="on" parse="off" />
+
+</script>
+
+<form action="i2.php" method="post" id="areacaptura">
+<input type="hidden" name="modo" value="areacaptura" />
+
+<input type="hidden" name="pos_x" id="pos_x"	/>
+<input type="hidden" name="pos_y" id="pos_y" />
+
+<input type="hidden" name="w" id="w"	/>
+<input type="hidden" name="h" id="h" />
+</form>
+
+
+<style>
+
+#caja {
+	position: absolute;
+	border: 2px solid red;
+	font-size: 11px;
+}
+
+#caja pre {
+	padding: 0px;
+	margin: 0px;
+
+}
+
+#imagenplantilla:hover {
+	cursor: pointer;
+	cursor:crosshair;
+}
+
+
+.oculto {
+	display:none;
+	visibility:hidden;
+}
+
+
+</style>
+
+
+<fieldset>
+
+	<table width="100%">
+	<tr>
+		<td>
+	
+	<button id="direccioncliente" class="dir oculto">Dirección cliente</button>
+	<button id="direccionentrega" class="dir">Dirección entrega</button>
+
+
+	<button class="num" id="numpedido">Nº Pedido</button>
+	<button class="num" id="fechaentrega">Fecha pedido</button>
+	<button class="misc1" id="lineaspedido">Lineas de pedido</button>
+
+	<button class="num oculto">nº Referencia</button>
+
+	<button class="num oculto">Nº Cliente</button>
+
+	<!-- <div class="separador"><br /></div> -->
+
+
+	<button class="kill oculto">Ignorar área</button>
+	<button class="text oculto">Observaciones</button>
+		
+		</td><td align="right">
+			<button id="guarda" class="ui-icon-locked">Guardar cambios</button>
+			<button id="cancelar" class="ui-icon-close">Cancelar</button>
+	</td></tr></table>
+
+</fieldset>
+
+<textarea style="width: 100%" id="status" class="oculto">
+
+</textarea>
+
+
+<fieldset>
+<legend>Plantilla ({TID})</legend>
+<div id="caja">+</div>
+<div style="width:100%;height:2000px;overflow:hidden">
+<img
+
+id="imagenplantilla"
+
+style="border:1px solid #ccc"
+
+src ="{WEBPATH}../scan/{FICHEROTRABAJO}"
+
+/>
+</div>
+
+</fieldset>
+
+

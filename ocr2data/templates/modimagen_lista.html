@@ -1,0 +1,31 @@
+<h3 class="nonbreseccion">Lista imagenes</h3>
+
+
+<form action="modimagen.php" method="post">
+<input type="hidden" name="modo" value="alta" />
+<input type="text" name="fichero" value="1" />
+<input type="submit" value="Alta imagen"/>
+</form>
+
+
+<div class="mensaje">
+	<patTemplate:var name="mensaje"  />
+</div>
+
+<ul>
+	<patTemplate:tmpl name="lista">
+	<li>
+	<form action="modimagen.php" method="post">
+	<input type="hidden" name="imagen_id" value='<patTemplate:var name="imagen_id" modifier="html8"/>' />
+	<span class='botones'><input type="image" src="img/quick.gif" name="modo" value='eliminar'></span>
+	<span>[{IMGPADRE_ID}] img:<patTemplate:var name="fichero" modifier="html8" />, estado=<patTemplate:var name="estado" modifier="html8" /><br>
+	 <a href="modrecon.php?id={RECON_ID}">recon:{RECON_ID}</a>
+	</span>
+	</form>
+
+
+	</li>
+	</patTemplate:tmpl>
+
+</ul>
+

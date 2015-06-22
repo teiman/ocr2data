@@ -1,0 +1,32 @@
+
+.verdescargar {
+	ztext-align:right;
+	float:right;
+	margin-right: 20px;
+	padding-bottom: 10px;
+}
+
+.listadoficheros li {
+  margin-bottom: 6px;
+  border:1px solid #ccc;
+  padding:4px;
+  padding-left: 8px;
+  min-height: 40px;
+}
+
+.listadoficheros .cajadescripcion {
+	padding-left: 20px;
+	padding-top:4px;
+    padding-right: 20px;
+}
+
+
+
+.verdescargar a {
+  padding-right: 10px;
+}
+
+.verdescargar a.nobg:hover {
+  background-color: white;
+}
+

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Interface diseño</title>
+	<link type="text/css" href="../../themes/base/jquery.ui.all.css" rel="stylesheet" />
+	<script type="text/javascript" src="../../jquery-1.4.2.js"></script>
+	<script type="text/javascript" src="../../ui/jquery.ui.core.js"></script>
+	<script type="text/javascript" src="../../ui/jquery.ui.widget.js"></script>
+	<script type="text/javascript" src="../../ui/jquery.ui.button.js"></script>
+	<link type="text/css" href="../demos.css" rel="stylesheet" />
+	<script type="text/javascript">
+
+	$(function() {
+        
+        $("button").button();
+        
+        $("#guarda").button({
+            icons: {   primary: "ui-icon-disk"}
+           });
+           
+       $(".dir").button({
+            icons: {   primary: "ui-icon-mail-close"}
+           });
+           
+       $(".num").button({
+            icons: {   primary: "ui-icon-play"}
+           }); 
+                     
+       $(".misc1").button({
+            icons: {   primary: "ui-icon-extlink"}
+           }); 
+           
+       $(".misc").button({
+            icons: {   primary: "ui-icon-extlink"}
+           });   
+           
+       $(".kill").button({
+            icons: {   primary: "ui-icon-closethick"}
+           });     
+           
+           
+       $(".text").button({
+            icons: {   primary: "ui-icon-note"}
+           });                                 
+	});
+	
+	/*
+	
+	http://jquery-ui.googlecode.com/svn/trunk/tests/static/icons.html
+	
+	
+		<button id="guarda" class="ui-icon-locked">Guardar cambios</button>
+	<button class="dir">Dirección cliente</button>
+	<button class="dir">Dirección entrega</button>
+	<button class="num">nº Referencia</button>
+	<button class="num">Fecha pedido</button>
+	<button class="num">Nº Cliente</button>
+	<button class="num">Nº Pedido</button>
+	<button class="misc1">Separador Datos/Lineas</button>
+	<div class="separador"><br /></div>
+	<button class="kill">Ignorar área</button>
+	<button class="text">Observaciones</button>
+	*/
+		</script>
+	<style>
+		
+	</style>
+</head>
+<body>
+
+<!-- -->
+
+<style>
+
+
+
+* {
+  font-family: helvetica;
+  font-size: 12px;
+}
+
+button {
+  font-family: arial;
+}
+body {
+ margin-top: 50px;
+}
+
+.lineausuario {
+ float:right;
+ font-size: 12px;
+ padding-right: 8px;
+}
+.lineausuario a {
+ color: white;
+ font-size: 12px;
+}
+
+
+.logocaja {
+ position:absolute;top:0px;left:0px;width:100%;
+ height:40px; 
+ background-color: #457;
+ color: white;
+}
+
+.anagrama {
+  padding: 10px;
+  font-weight: bold;
+  font-family: helvetica;
+  font-size:20px;
+}
+
+
+
+</style>
+<div class="logocaja" style="">
+<div class="lineausuario"><b>Usuario</b>: <a href="#">Gestor zaragoza</a> | <a href="#">Menú principal</a> | <a href="#">Cerrar sesión</a> </div>
+<span class='anagrama'>OCR2DATA - Diseñador de formularios.</span>
+</div>
+
+
+<fieldset>
+
+	<button id="guarda" class="ui-icon-locked">Guardar cambios</button>
+	<button class="dir">Dirección cliente</button>
+	<button class="dir">Dirección entrega</button>
+	<button class="num">nº Referencia</button>
+	<button class="num">Fecha pedido</button>
+	<button class="num">Nº Cliente</button>
+	<button class="num">Nº Pedido</button>
+
+	<div class="separador"><br /></div>
+		<button class="misc1">Separador Datos/Lineas</button>
+	<button class="kill">Ignorar área</button>
+	<button class="text">Observaciones</button>
+</fieldset>	
+
+<fieldset>
+<legend>Plantilla: pedido de Albaca </legend>
+
+<img  width="100%" style="border:1px solid #ccc"
+src ="hoja_pedido.jpg"
+
+/>
+
+</fieldset>	
+
+
+
+<!-- -->
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,106 @@
+** Estructuras directorios **
+
+*** Documentacion ***
+
+/documentos
+Documentacion técnica de ayuda y uso.
+
+/documentos/ocr2data_tablas
+PDF's con el esquema SQL de cada tabla.
+
+*** Programa ***
+
+/ocr2data 
+Carpeta del codigo del programa
+
+/ocr2data/class
+Clases del programa
+
+/ocr2data/config
+Carpeta con el fichero de configuracion del programa "config.php".
+
+/ocr2data/css
+Ficheros de estilo principales
+
+/ocr2data/img
+Iconos y otros graficos usados por el programa
+
+/ocr2data/inc
+Librerias de funciones del programa
+
+/ocr2data/js
+Codigo javascript usado por el programa
+
+/ocr2data/plugins
+Carpeta de plugins de exportación
+
+/ocr2data/plugins/ini 
+Carpeta del plugin de exportacion de ejemplo "ini" que exporta al formato .ini
+
+/ocr2data/templates
+HTML, CSS, JS para el theme instalado. Permite personalizar la presentación del programa para adaptarlo a la identidad corporativa de nuestra empresa. La logica del programa y la presentacion estan separadas, y aqui esta la presentacion. 
+
+
+** Datos del programa **
+
+/ocr2data_data
+Carpeta de datos
+
+/ocr2data/backup
+Carpeta reservada para copias de seguridad
+
+/ocr2data/esquema
+Carpeta reservada para almacenar esquemas de base de datos
+
+/ocr2data/faxtmp
+Carpeta temporal
+
+/ocr2data/importar
+Carpeta origen de los documentos, donde se colocan los ficheros .ini descriptivos, y los originales pdf
+
+/ocr2data/iniout
+Carpeta de salida de los documentos procesados a formato ini. Se utiliza por el exportador ini.
+
+/ocr2data/misc
+Reservado
+
+/ocr2data/scan 
+Aqui se crean los ficheros de la template. Los ficheros creados aqui se utilizan por el editor de templates. Esta carpeta tiene que ser visible en web. 
+
+/ocr2data/tmp
+Reserva carpeta temporal
+
+/ocr2data/web
+Se guardan aqui las vistas del documento para el operario. Con el formato image_{codigo plataforma externa}.jpg .Esta carpeta tiene que ser visible en web. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+

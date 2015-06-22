@@ -1,0 +1,38 @@
+
+
+.logincontenedor {
+ border-style: solid;
+ border-color: rgb(235, 235, 235) rgb(217, 217, 219) rgb(235, 235, 235) rgb(235, 235, 235);
+ border-width: thin;
+ height: 228px;
+ width: 456px;
+ margin-left:auto;
+ margin-right:auto;
+}
+
+.logincaja {
+	border: thin solid rgb(235, 235, 235);
+	margin: 2px;
+	padding: 1px;
+	width: 448px;
+	height: 220px;
+	background-image: url(../../theme/apagadologin4.gif);
+}
+
+.tablalogin span {
+	font-family: "Arial Narrow", Arial,Helvetica,sans-serif;
+	text-transform: uppercase;
+	font-weight: bold;
+    font-size: 14px;
+}
+
+.tablalogin input {
+  width: 90%;
+  margin-bottom: 5px;
+}
+
+.logincontenedor {
+
+	margin-top: 10%;
+	margin-bottom: 10%;
+}

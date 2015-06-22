@@ -1,0 +1,422 @@
+
+
+* {
+	color: #949599;
+	font-size: 11px;
+	font-family:	"Trebuchet MS",Arial,Helvetica,sans-serif;
+}
+
+
+
+root { 
+    display: block;
+}
+
+
+.ocultar , .oculto {
+	display:none;
+}
+
+
+h1{
+	font-size: 18px;
+}
+
+h2{
+	font-size: 17px;
+}
+
+h3{
+	font-size: 16px;
+}
+
+h4{
+	font-size: 15px;
+}
+
+h5{
+	font-size: 14px;
+}
+
+input.int3 {
+	width: 4em;
+}
+
+input.nombre {
+	width: 20em;
+}
+
+
+/* -------------------------------- */
+
+
+.contenido a.subcategoria {
+	color: #4AA7C9;
+	text-decoration:none;
+	text-transform: uppercase;
+	font-size: 11px;
+}
+
+
+
+.contenido h1 {
+	font-family:	"Arial Narrow", Arial,Helvetica,sans-serif;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+
+
+.contenido h2 {
+	font-family:	"Arial Narrow", Arial,Helvetica,sans-serif;
+	font-size: 16px;
+	margin:5px 0 0;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+
+.contenido p {
+	color: #949599;
+	font-size: 11px;
+	font-family:	"Trebuchet MS",Arial,Helvetica,sans-serif;
+	line-height: 1.35em;
+
+}
+
+
+/* -------------------------------- */
+
+.menu td.seccion {
+	color: #50606d;
+	background-color: #CDD2D8;
+	font-size: 11px;
+	font-weight: bold;
+	font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
+
+	padding-left: 5px;
+	text-transform: uppercase;
+}
+
+.menu td {
+	border-left: 1px solid #A5AFB8;
+	border-right: 1px solid #A5AFB8;
+	border-top: 1px solid #A5AFB8;
+	padding-bottom:2px;
+	padding-top: 2px;
+}
+
+.menu td a {
+	color: #73787E;
+	text-decoration: none;
+	font-size: 11px;
+	font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
+}
+
+
+.menu td.enlaces {
+	background-color: #F8FCFD;
+	padding-left: 22px;
+	padding-top: 2px;
+	padding-bottom: 2px;	
+}
+
+.menu {
+	border-bottom:  1px solid #A5AFB8;
+	width: 180px;
+}
+
+
+/* -------------------------------- */
+
+
+
+.listacategorias  {
+	color: #003A56;
+	font-size: 11px;
+	list-style-type: square;
+	margin: 10px 5px 10px 0;
+	padding: 0px;
+    font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
+}
+
+.listacategorias li {
+	/*margin: 0 0 -5px;
+	padding: 0px;
+	width: 90%;*/
+    font-weight: normal;
+}
+
+.listacategorias a {
+	padding-left: 4px;
+	padding-right: 40px;
+}
+
+.listacategorias a:hover {
+	background-color: #EBF6FC;
+}
+
+
+.listacategorias {
+  padding-left: 22px;
+  padding-left: 15px;
+}
+
+
+.cajas , .cajas td  {
+  border: 1px solid white;
+}
+
+
+/* ---- LAYOUT ----- */
+
+
+.siderbar {
+ position: absolute;
+ padding: 10px;
+ background-color: #eff1f2;
+ top:0px;
+ left: 0px;
+}
+
+
+
+.contenido {
+	background-color: white;
+	min-height: 600px;
+	text-align: left;
+
+	padding: 10px;
+	
+}
+
+
+body {
+ padding-top: 190px;
+}
+
+
+.cajacontenido {
+  border-top: 10px solid #eff1f2;
+  border-right: 10px solid #eff1f2;
+  border-bottom: 10px solid #eff1f2;
+  border-left: 200px solid #eff1f2;  
+  padding: 0px;
+  min-height: 90%;
+  text-align: left;
+}
+
+.siderbar {
+ position: absolute;
+
+ padding: 10px;
+ background-color: #eff1f2;
+ top:190px;
+ left: 0px;
+}
+
+.headbar {
+ position: absolute;
+ top:0px;
+ left:0px;
+ width: 100%;
+ height: 190px;
+ border: 0px solid blue;
+ background-color: rgb(255,100,0);
+ overflow: hidden;
+ margin-top:0px;
+ padding:0px;
+ height: 190px;
+ background-image: url(../theme/banda.jpg);
+}
+
+
+
+.migas td , .migas span {
+  font-size: 12px;
+  height: 19px;
+}
+
+
+.cabeceratitulo {
+  float:right;
+  background-color: white;
+  padding-left:10px;
+  padding-right:10px;
+}
+
+
+/* --- estilos --- */
+
+html, body {
+	background-color: #eff1f2;
+}
+
+.alerta {
+  background-color: #eef;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  padding-top: 3px;
+}
+
+
+
+fieldset {
+  border:1px solid  #ccc;
+  margin-top:10px;
+  margin-bottom: 20px;
+  padding:5px;
+ }
+
+legend {
+  padding: 0.2em 0.5em;
+  color:black;
+  font-size:12px;
+ }
+
+
+.contenido a {
+	font-size: 11px;
+	font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
+}
+
+
+/* ---- */
+
+
+
+.logo {
+ position:absolute;
+ top:0px;
+ left:0px;
+ width: 100%;
+ background-color: white;
+ 
+}
+
+.portalanagrama img {
+	border:0px solid gray;
+	margin-left: 200px;
+}
+
+
+/* ---- */
+
+#cajausuario {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	z-index: 10;
+
+}
+
+
+#tablausuario td {
+	padding-top:	2px;
+	padding-right:	10px;
+	padding-bottom:	2px;
+	padding-left:	10px;
+}
+
+
+#cajausuario, #cajausuario * {
+	font-family:	"Trebuchet MS",Arial,Helvetica,sans-serif;
+	font-size:	10px;
+	font-style:	normal;
+	color:	#7B8589;
+	text-transform:	uppercase;
+}
+
+#tablausuario td {
+	border: 1px solid #BABFC1;
+}
+
+#tablausuario {
+	width: 240px;
+}
+
+
+.ficherodescarga {
+ 	font-family:	"Trebuchet MS",Arial,Helvetica,sans-serif;
+	font-size:	10px;
+	font-style:	normal;
+	color:	#7B8589;
+	text-transform:	uppercase;
+}
+
+
+
+.bloqueinterno {
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top: 4px;
+	margin-bottom: 8px;
+	padding-bottom: 4px;
+}
+
+.descripcionfichero {
+	border-bottom: 1px solid #ccc;
+}
+
+h2.titulovideo {
+	margin-bottom: 20px;
+
+}
+
+/* ---- */
+
+.cajabuscarstandalone {
+
+
+}
+
+
+
+.mensajeaviso {
+
+	background-color: #fff6bf;
+	background-image: url(../img/bw/channel1.gif);
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-position: 15px 50%;
+	text-align: left;
+	padding-top: 5px;
+	padding-right: 20px;
+	padding-bottom: 5px;
+	padding-left: 45px;
+	border-top-width: 2px;
+	border-top-style: solid;
+	border-top-color: #ffd324;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+	border-bottom-color: #ffd324;
+	font-size: 13px;
+	color: black;
+	width: 400px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.mensajeaviso a {
+		font-size: 13px;
+}
+
+
+/* ------------- */
+
+.titulodocumento{
+	padding-bottom: 10px;
+}
+
+
+.volverlink {
+
+	margin-bottom: 10px;
+}
+
+
+.botonenviar {
+ color: #333;
+}
+

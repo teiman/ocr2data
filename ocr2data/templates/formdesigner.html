@@ -1,0 +1,381 @@
+
+
+
+<script>
+
+function disableDraggingFor(element) {
+  // this works for FireFox and WebKit in future according to http://help.dottoro.com/lhqsqbtn.php
+  element.draggable = false;
+  // this works for older web layout engines
+  element.onmousedown = function(event) {
+                event.preventDefault();
+
+                return false;
+              };
+}
+
+		function reajustaImagenPrincipal(){
+
+		   var $imagen = $("#imagenplantilla");
+
+	       $imagen.removeAttr("width")
+           .removeAttr("height")
+           .css({ width: "", height: "" }); // Remove css dimensions as well
+
+			var realw = $imagen.width();
+		    var realh = $imagen.height();
+
+			$imagen.css("width","100%");
+			var wplantilla = $("#imagenplantilla").width();
+
+			//alert("old:"+realw+ ",new:"+w);
+			area.factorw = realw/wplantilla;
+
+			//alert("h!"+area.factorw);
+	   }
+	   
+var area = {"pos_x":0,"pos_y":0 ,"modo":"parar" };
+
+var plantilla = { "documento":"plantilla" };
+plantilla.areas = new Array();
+
+
+function onLoadPageAlta(){
+
+		area.caja = $("#caja");
+
+        $("button").button();
+
+        $("#guarda").button({
+            icons: {   primary: "ui-icon-disk"}
+           });
+
+       $(".dir").button({
+            icons: {   primary: "ui-icon-mail-close"}
+           });
+
+       $(".num").button({
+            icons: {   primary: "ui-icon-play"}
+           });
+
+       $(".misc1").button({
+            icons: {   primary: "ui-icon-extlink"}
+           });
+
+       $(".misc").button({
+            icons: {   primary: "ui-icon-extlink"}
+           });
+
+       $(".kill").button({
+            icons: {   primary: "ui-icon-closethick"}
+           });
+
+
+       $(".text").button({
+            icons: {   primary: "ui-icon-note"}
+           });	    
+
+		area.reset = function(){
+			this.pos_x = 0;
+			this.pos_y = 0;
+			this.fin_x = 0;
+			this.fin_y = 0;
+			area.caja.hide();
+		};
+
+		function actualizarCaja(){
+			area.caja.css("left",area.pos_x + "px");
+			area.caja.css("top",area.pos_y + "px");
+
+			var w = Math.abs(area.fin_x - area.pos_x) ;
+			var h = Math.abs(area.fin_y - area.pos_y) ;
+
+			area.w = w;
+			area.h = h;
+
+			area.caja.css("width",w + "px");
+			area.caja.css("height",h + "px");
+		}
+
+		disableDraggingFor(document.getElementById('imagenplantilla'));
+
+	   $("#imagenplantilla").click(function(e){
+		  //$('#status').html(e.pageX +', '+ e.pageY);
+
+		  switch(area.modo){
+			case "inicio":
+				area.pos_x = e.pageX;
+				area.pos_y = e.pageY;
+				area.modo = "fin";
+				area.caja.html("");
+				area.caja.css("background-color","transparent");
+				break;
+			case "fin":
+				//toma datos
+				area.fin_x = e.pageX;
+				area.fin_y = e.pageY;
+
+				//Corrige geometrias raras
+				if ( area.fin_x < area.pos_x ){
+					var tmp = area.pos_x;
+					area.pos_x = area.fin_x;
+					area.fin_x = tmp;
+				}
+
+				if ( area.fin_y < area.pos_y ){
+					var tmp = area.pos_y;
+					area.pos_y = area.fin_y;
+					area.fin_y = tmp;
+				}
+
+				area.caja.show();
+				area.modo = "reconoce";
+
+				actualizarCaja();
+				plantilla.guardarArea();
+
+
+				break;
+			case "reconoce":
+				//alert(area);
+
+				recogerOCRDeArea();
+				area.modo = "parar";
+				break;
+			case "parar":
+				break;
+			default:
+				break;
+		  }
+
+	   });
+
+
+	   plantilla.guardarArea = function(){
+
+			var position = $("#imagenplantilla").position();
+
+			area.enimagen_x = area.pos_x - position.left;
+			area.enimagen_y = area.pos_y - position.top;
+
+			$("#pos_x").val(area.enimagen_x * area.factorw);
+			$("#pos_y").val(area.enimagen_y * area.factorw);
+
+
+			var w = area.w * area.factorw;
+
+			$("#w").val(w);
+			$("#h").val(area.h * area.factorw);
+
+			//console.dir(area);
+			//alert("w:"+w + ",factorw:" + area.factorw + ",a.h"+area.h);
+			
+			var dataArea = {
+						registro: area.registro,
+						pos_x : $("#pos_x").val(),
+						pos_y : $("#pos_y").val(),
+						w : $("#w").val(),
+						h : $("#h").val()
+					};
+
+			//alert(dataArea.toSource());
+
+			plantilla.areas[ area.registro ] = dataArea;
+
+			return dataArea;
+		}
+
+
+
+		plantilla.guardarServidor = function(){
+
+
+			//:cadenaAreas
+			//direccioncliente, direccionentrega
+			var cadena = "";
+			cadena += JSON.stringify(plantilla.areas["direccioncliente"]) + "#";
+			cadena += JSON.stringify(plantilla.areas["direccionentrega"]) + "#";
+			cadena += JSON.stringify(plantilla.areas["numpedido"]) + "#";
+			cadena += JSON.stringify(plantilla.areas["fechaentrega"]) + "#";
+			cadena += JSON.stringify(plantilla.areas["lineaspedido"]) + "#";
+
+			var message  = {'areas':cadena,'modo':'guardarareas','test':7};
+
+			
+			
+			$.ajax({
+				  url: "i2.php",
+				  type: "POST",
+				  dataType: 'json',
+				  zcontentType: "application/json; charset=utf-8",
+				  data: message ,
+				  success: function(msg){
+					  alert("data:"+msg["php"]);
+					 //area.caja.html("<pre>"+ msg["ocr"] + "</pre>");
+					 //area.caja.css("background-color","#ccc");
+				  }
+				}
+			);
+			
+		}
+
+
+
+
+	   function recogerOCRDeArea(){
+
+			var position = $("#imagenplantilla").position();
+
+			area.enimagen_x = area.pos_x - position.left;
+			area.enimagen_y = area.pos_y - position.top;
+
+			$("#pos_x").val(area.enimagen_x * area.factorw);
+			$("#pos_y").val(area.enimagen_y * area.factorw);
+
+			$("#w").val(area.w * area.factorw);
+			$("#h").val(area.h * area.factorw);
+
+			var dataArea = {
+						modo: 'areacaptura',
+						registro: area.registro,
+						pos_x : $("#pos_x").val(),
+						pos_y : $("#pos_y").val(),
+						w : $("#w").val(),
+						h : $("#h").val() };
+
+			$.ajax({
+				  url: "i2.php",
+				  type: "POST",
+				  dataType: 'json',
+				  data: (dataArea),
+				  success: function(msg){
+					 //alert("data:"+msg["ocr"]);
+					 area.caja.html("<pre>"+ msg["ocr"] + "</pre>");
+					 area.caja.css("background-color","#ccc");
+				  }
+				}
+			);
+		}
+
+		$("#direccioncliente").click(function(){
+			area.reset();
+			actualizarCaja();
+			area.modo = "inicio";
+			area.registro ="direccioncliente";
+		});
+
+		$("#direccionentrega").click(function(){
+			area.reset();
+			actualizarCaja();
+			area.modo = "inicio";
+			area.registro ="direccionentrega";
+		});
+
+		$("#numpedido").click(function(){
+			area.reset();
+			actualizarCaja();
+			area.modo = "inicio";
+			area.registro ="numpedido";
+		});
+		$("#fechaentrega").click(function(){
+			area.reset();
+			actualizarCaja();
+			area.modo = "inicio";
+			area.registro ="fechaentrega";
+		});
+
+		$("#lineaspedido").click(function(){
+			area.reset();
+			actualizarCaja();
+			area.modo = "inicio";
+			area.registro ="lineaspedido";
+		});
+
+		$("#guarda").click(function(){
+			plantilla.guardarServidor();
+		});
+
+	   reajustaImagenPrincipal();
+}
+
+
+</script>
+
+<form action="i2.php" method="post" id="areacaptura">
+<input type="hidden" name="modo" value="areacaptura" />
+
+<input type="hidden" name="pos_x" id="pos_x"	/>
+<input type="hidden" name="pos_y" id="pos_y" />
+
+<input type="hidden" name="w" id="w"	/>
+<input type="hidden" name="h" id="h" />
+</form>
+
+
+<style>
+	
+#caja {
+	position: absolute;
+	border: 2px solid red;
+	font-size: 11px;
+}
+
+#caja pre {
+	padding: 0px;
+	margin: 0px;
+
+}
+
+#imagenplantilla:hover {
+	cursor: pointer;
+	cursor:crosshair;
+}
+	
+	
+</style>
+
+
+<fieldset>
+
+	<button id="guarda" class="ui-icon-locked">Guardar cambios</button>
+	<button id="direccioncliente" class="dir">Dirección cliente</button>
+	<button id="direccionentrega" class="dir">Dirección entrega</button>
+	<div class="separador"><br /></div>
+
+	<button class="num" id="numpedido">Nº Pedido</button>
+	<button class="num" id="fechaentrega">Fecha pedido</button>
+	<button class="num">nº Referencia</button>
+	
+	<button class="num">Nº Cliente</button>
+	
+	<div class="separador"><br /></div>
+
+	<button class="misc1" id="lineaspedido">Lineas de pedido</button>
+	<button class="kill">Ignorar área</button>
+	<button class="text">Observaciones</button>
+
+</fieldset>
+
+<textarea style="width: 100%" id="status">
+
+</textarea>
+
+
+
+
+<fieldset>
+<legend>Plantilla </legend>
+<div id="caja">+</div>
+<div style="width:100%;height:2000px;overflow:hidden">
+<img  id="imagenplantilla"
+
+style="border:1px solid #ccc"
+
+src ="scan/{FICHEROTRABAJO}"
+
+/>
+</div>
+
+</fieldset>
+
+

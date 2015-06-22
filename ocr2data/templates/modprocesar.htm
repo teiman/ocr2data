@@ -1,0 +1,27 @@
+<h3 class="nonbreseccion">Procesar</h3>
+
+<script>
+
+function onLoadPageAlta(){
+    //$("#cogerPrimero").focus();
+}
+
+function Correr(){
+    $("#rutina").attr("src","proceso.php?&r="+Math.random());
+}
+
+
+</script>
+
+
+<div class="mensaje">
+    <patTemplate:var name="mensaje"  />
+</div>
+
+
+<input class="procesoaplicacion" type="button" value="Correr rutina de procesamiento" onclick="Correr()" />
+
+
+<iframe id="rutina" src="about:blank" style='width:100%; height: 1200px'  >
+
+</iframe>

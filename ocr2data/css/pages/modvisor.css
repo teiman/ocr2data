@@ -1,0 +1,16 @@
+
+
+
+.visualizadorhtml , .visualizadorpdf , .visualizadorvideo {
+ border-left: 32px solid white;
+ border-right: 24px solid white;
+
+ font-size: 12px;
+}
+
+.visualizadorhtml h2,.visualizadorpdf h2 , .visualizadorvideo h2 {
+ margin-bottom: 10px;
+}
+
+
+

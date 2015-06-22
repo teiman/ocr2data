@@ -1,0 +1,45 @@
+<h3 class="nonbreseccion">Importar</h3>
+
+<script>
+
+function onLoadPageAlta(){
+    //$("#cogerPrimero").focus();
+}
+
+function Correr(){
+
+    //$("#rutina").attr("src","genxml.php?id_recon=2&r="+Math.random());
+//     //$("#rutina").attr("src","importar.php?&r="+Math.random());
+}
+
+
+</script>
+
+
+<div class="mensaje">
+    <patTemplate:var name="mensaje"  />
+</div>
+
+
+<form action="importar.php" method="post" target="rutina">
+
+<table  class="fr_table fullpage">
+<tr class="fila_0 ocultar"><td class="headdato">1 - Crea template</td><td class="datodato"><input type="checkbox" name="createmplate" checked="checked" /></td></tr>
+<tr class="fila_1 ocultar"><td class="headdato">2 - Autodetectar template</td><td class="datodato"><input type="checkbox" name="autodetectar" /></td></tr>
+<tr class="fila_0 ocultar"><td class="headdato">3 - User template</td><td class="datodato"><input type="text" name="template_id" value="0" /></td></tr>
+<tr class="fila_1"><td class="headdato">Nombre template (se usa si no detecta una existente)</td><td class="datodato"><input type="text" name="templatename" value="template" /></td></tr>
+<tr class="fila_0"><td class="headdato">C&oacute;digo de identificador externo (CRM, gestor documental,etc)</td><td class="datodato"><input type="text" name="id_comm" value="199" /></td></tr>
+<tr class="fila_1"><td class="headdato">Fichero ini datos de importaci&oacute;n</td><td class="datodato"><input type="text" name="path" value="/home/oscar/www/ocr2data_libre/ocr2data_data/importar/e2.ini" style="width: 30em" /></td></tr>
+<tr class="fila_0"><td class="headdato">Direcci&oacute;n origen</td><td class="datodato"><input type="text" name="origen_addr" value="643210012" style="width: 30em" /></td></tr>
+
+
+</table>
+
+
+<input type="submit" value="Importar documentos" class="procesoaplicacion"   />
+
+</form>
+
+<iframe id="rutina" name="rutina" src="about:blank" style='width:100%; height: 1200px'  >
+
+</iframe>

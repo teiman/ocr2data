@@ -1,0 +1,278 @@
+
+
+.editable {
+
+	border: solid 2px #DFDFDF;
+
+}
+
+.des-seleccionado{
+    	
+		zbackground-color: #E4F6F8;
+
+    	color: #6F6F6F;
+		border: solid 2px #DFDFDF;
+}
+
+
+input.seleccionado,
+textarea.seleccionado,
+.des-seleccionado
+{
+    	margin:0;
+    	padding:0;
+    	font:bold 12px "Lucida Grande", Arial, sans-serif;
+		border:solid 2px #eee;
+}
+
+input.seleccionado,
+textarea.seleccionado {
+   	border:solid 2px #73A6FF;
+   	zbackground:#EFF5FF;
+   	color:#000;
+	font-weight: bold;
+}
+
+/* - - - - - - */
+
+#cajadatos {
+	float:left;
+        width: 400px;
+}
+
+#cajaplantilla {
+ float:right;
+}
+
+#imagenplantilla {
+ width: 100%;
+ float: left;
+}
+
+
+label {
+  width: 100px;
+  display: block;
+}
+
+
+.direccionentrega ,
+.direccioncliente {
+  width: 100%;
+  zheight: 68px;
+  height: 80px;
+}
+
+
+.readonlyKey {
+	zbackground-color: #ddd;
+	zopacity: 0.5;
+	z-moz-opacity: 0.5;
+	zfilter: alpha(opacity = 50);
+}
+
+
+
+input.id_producto {
+ width: 4em;
+}
+
+input.producto {
+ width: 100%;
+ width: 20em;
+}
+
+.ocultar , .oculto , .ocultofijo{
+	display:none;
+	visibility: hidden;
+}
+
+label.etiqueta {
+  margin-top: 10px;
+  margin-bottom: 1px;
+}
+
+
+/* - - - - - - - - - - - */
+
+.savana {
+ border: 1px solid gray;
+ height: 90px;
+ height: 52px;
+ height: 68px;
+ overflow:hidden;
+ zbackground-color: #eeeeee;
+ zbackground-color: #E4F6F8;
+}
+
+.elementosav {
+ zborder: 1px solid gray;
+ display: block;
+ text-decoration:none;
+ height: 90px;
+ overflow:hidden;
+ margin-bottom: 200px;
+ color: gray;
+ font-weight: bold;
+ margin: 4px;
+
+ height: 52px;
+ height: 90px;
+ height: 68px;
+}
+
+.savana a {
+	padding-left: 28px;
+	background-image: url(img/save.gif);
+	background-repeat: no-repeat;
+	background-position: 2px 2px;
+}
+
+
+
+.editable {
+	background-repeat: no-repeat;
+	background-position: 2px -2px;
+	/* padding-left: 20px; */
+}
+
+textarea.seleccionado {
+	padding-left: 28px;
+	background-image: url(img/editicon.gif);
+	background-repeat: no-repeat;
+	background-position: 2px 2px;
+}
+
+
+/*
+input.readonlyKey {
+	background-image: url(img/editicon.gif);
+	background-repeat: no-repeat;
+	background-position: 2px -2px;
+	padding-left: 20px;
+}
+ */
+
+input.seleccionado {
+	background-image: url(img/editicon.gif);
+	background-repeat: no-repeat;
+	background-position: 2px -2px;
+	padding-left: 20px;
+}
+
+input.editando {
+	background-image: url(img/save.gif);
+}
+
+
+
+/* - - - - - - - - - - - */
+
+
+input.datomes2, input.datodia, input.datoagno {
+	width: 4em;
+}
+
+input.numpedido {
+	width: 12em;
+}
+
+
+input.referencia {
+	width: 8em;
+}
+
+input.int3 {
+	width: 4em;
+}
+
+int.producto {
+
+	width: 18em;
+
+}
+
+a.altaDireccion {
+
+	font-size: 12px;
+	font:bold 12px "Lucida Grande", Arial, sans-serif;
+
+
+	padding-top: 8px;
+	padding-left: 26px;
+	margin-left:0px;
+	margin-right:0px;
+
+	font-weight:bold;
+	color:black;
+
+	background-image: url(img/addnewbig.gif);
+	background-repeat: no-repeat;
+	background-position: 2px 2px;
+}
+
+input.cliente {
+	width: 100%;
+}
+
+
+
+.q_color_verde ,.q_color_naranja,.q_color_rojo {
+	background-color: #E4F6F8;
+}
+
+/*
+.q_color_verde {
+ background-color: #80EA69;
+ background-color: #cef7c6;
+
+ zborder: 3px solid red;
+}
+
+.q_color_naranja {
+ background-color: #FFD673;
+ zborder: 3px solid red;
+}
+
+.q_color_rojo {
+ background-color: #FFB073;
+ background-color: #ffe0c9;
+
+ zborder: 3px solid red;
+}
+*/
+
+
+label, legend {
+ font-size:13px;
+ width: 200px;
+ margin-top:12px;
+ font-family: Arial;
+}
+
+
+
+
+
+#botonEditarTemplate{
+   zfloat:left;
+}
+
+ #botonVolver {
+ zfloat:right;
+}
+
+
+fieldset {
+ border:2px solid #eee;
+}
+
+.cabeceraTituloProductos {
+	display:none;
+}
+
+
+
+
+
+

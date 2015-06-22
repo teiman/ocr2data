@@ -1,0 +1,12 @@
+
+*** Explicacion del OCR de OCR2DATA ***
+
+OCR2DATA utiliza tres cosas para detectar el documento.
+
+- datos reales: datos reales en las tablas de datos_
+- regiones: una template que define donde tiene que buscar los datos.
+- logica borrosa: algoritmos multiples de logica que analizan y detectan los datos siguiendo procedimientos distintos.
+
+Una region representa conceptos como "fecha", "direccion cliente", "lineas de factura". El OCR utiliza las templates para limitar las busquedas de datos a esas regiones y etiquetar el dato encontrado segun esta region. Si se marca "fecha factura" una region, todos los OCR subsiguientes que utilicen esa template intentaran leer una fecha de esta parte del documento. La detección utiliza multiples algoritmos y calculos de logica borrosa y obtiene el texto que mas probablemente hay en el documento, junto con un valor de la 'calidad' que el proceso de OCR cree haber obtenido en la deteccion. Por ejemplo, utiliza varios metodos para detectar un producto, si todos los metodos llegan al mismo resultado (el mismo producto) dara un id determinado y una calidad alta, pero si los distintos metodos difieren en el id detectado, dara ese mismo id, pero indicara una calidad baja.  Al operario de introduccion de datos no se les presenta cadenas de texto del OCR si la calidad es demasiado baja, porque lleva mas tiempo borrar una cadena completamente erronea que escribirla de cero. 
+
+Los algoritmos que comparan los datos de OCR con los datos reales son muy buenos, y en las mejores condiciones pueden tener un ratio de aciertos del 100%. La deteccion de datos como fechas, codigos de producto, etc.. tienen ratios siempre menores porque el programa no puede utilizar los datos reales para comparacion y validacion y ademas no tiene tantos algoritmos que por diferentes aproximaciones puede determinar estos datos. En general el operador humano que revisa los documentos es una parte indispensable del proceso. Salvo que los documentos esten muy definidos, sean datos facilmente contrastables.

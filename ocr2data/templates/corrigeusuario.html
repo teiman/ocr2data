@@ -1,0 +1,174 @@
+
+
+
+<style>
+<patTemplate:tmpl name="css_corrigeusuario" src="css_corrigeusuario.css" autoload="on" parse="off"/>
+</style>
+
+
+<script>
+
+var lineas = {};
+
+try {
+	lineas.interfaces = {INTERFACESJS};
+}catch(e) {};
+
+
+Global.direccionesCliente  = {};
+Global.recon_id = '<patTemplate:var name="idrecon" />';
+
+</script>
+
+<div id="jailtime">
+
+
+<table width="100%">
+<tr>
+<td valign="top">
+
+
+<div id="cajaplantilla" style="margin-right: 10px;padding-right: 10px;border-right: 2px solid #eee">
+<div id="contenedorimagen" style="overflow: hidden;">
+<img id="imagenplantilla"  src="{FICHEROTRABAJO}" />
+</div>
+</div>
+
+
+
+</td><td valign="top">
+
+<input class="interface" id="botonVolver" type="button" value="Volver listado" onclick="Cancelar()" />
+<input class="interface" id="botonEditarTemplate" type="button" value="Editar template" onclick="EditarTemplate(<patTemplate:var name="idrecon" />)" />
+<br>
+
+
+
+
+<fieldset id="cajadatos">
+
+<!-- -47 -->
+<form id="grupocontroles">
+
+<div id="cabeceralista">  </div>
+
+<div id="inicia_eleccioncliente_box">
+
+<input type="hidden" name="id_cliente" id="id_cliente" value='<patTemplate:var name="id_cliente" modifier="html8" />' class="enviardato" />
+<input type="hidden" name="id_comm" id="id_comm" value='<patTemplate:var name="idcomm" />' class="enviardato" />
+<input type="hidden" name="recon_id" id="recon_id" value='<patTemplate:var name="idrecon" />' class="enviardato" />
+<input type="hidden" name="tid" id="template_id" value='<patTemplate:var name="tid" />' class="enviardato" />
+
+<label class="etiqueta" for="desconocido">Cliente </label>
+<input
+	class="cliente editable interface comp_iniciacambiacliente readonlyKey q_color_{COLORCLIENTE}"
+	id="cambioCliente"
+	type="text"
+	value="<patTemplate:var name="nombrecliente" modifier="html8" />"
+	name="nombrecliente"
+	autocomplete="off"
+	/>
+</div>
+
+<div id='eleccioncliente_box' class='oculto' >
+	<input id='eleccioncliente' type='text' name='cliente' class='ignorainterface comp_focuscambiacliente'>
+</div>
+
+
+	<patTemplate:tmpl name="lista">
+
+	<div class="<patTemplate:var name="class2" modifier="html8" />">
+	<label for="<patTemplate:var name="name" modifier="html8" />" class='etiqueta {OCULTAR}'>
+		<patTemplate:var name="label" />
+	</label>
+
+	<<patTemplate:var name="tagname" />
+
+		id="elemento_<patTemplate:var name="id" />"
+		name="<patTemplate:var name="name" modifier="html8" />"
+		type="<patTemplate:var name="type" modifier="html8" />"
+		class="<patTemplate:var name="class" modifier="html8" /> <patTemplate:var name="class2" modifier="html8" />
+		 editable interface {OCULTAR} comp_<patTemplate:var name="comportamiento" />  q_colorificar"
+		value="<patTemplate:var name="value" modifier="html8" />"
+
+
+		><patTemplate:var name="datoscomplejos"
+
+	/></<patTemplate:var name="tagname" />>
+
+	<input type="hidden" class="dato_q" id='q_<patTemplate:var name="id" />' value='<patTemplate:var name="q" />' />
+
+	<br class="{OCULTAR} <patTemplate:var name="class2" modifier="html8" />"  />
+	</div>
+
+	</patTemplate:tmpl>
+
+<div id="lineas">
+
+
+</div>
+<div id="lineas2">
+
+
+</div>
+<label>Observaciones</label>
+
+<textarea
+	name="observaciones"
+	class="editable interface comp_observaciones q_color_verde"
+	style="width:100%"><patTemplate:var name="observaciones" modifier="html8" /></textarea>
+
+
+<div style="margin-top: 8px">
+<input id="tramitado" type="submit" value="Tramitado" class="interface" />
+<input id="enproceso" type="submit" value="En proceso" class="interface" onclick="SalirMarcandoEnProceso()" />
+<input id="cancelaboton" type="submit" value="Cancelar" class="interface" onclick="Cancelar()" />
+</div>
+
+<!--
+<xmp style="width: 200px;">
+{DATOS}
+</xmp>
+       -->
+
+<!-- ------------------------ -->
+</form>
+</fieldset>
+
+
+<!--[if ! IE ]>
+  <p><legend>IDCOM:{IDCOMM} - RECON:{IDRECON}</legend></p>
+<![endif]-->
+
+
+</td></table>
+
+</div>
+
+<script>
+
+Global.substring = "";
+Global.id_cliente = <patTemplate:var name="id_cliente"  />;
+Global.framenum = <patTemplate:var name="framenum" />;
+Global.id_comm = '{IDCOMM}';
+
+lineas.eligeCliente = '{ELEGIRCLIENTE}';
+
+<patTemplate:tmpl name="js_corrigeusuario" src="js_corrigeusuario.js" autoload="on" parse="off"/>
+
+</script>
+
+
+<form id="emisorEnProceso" action="lectura.php" method="post" target="pantallamuda">
+<input type="hidden" name="recon_id" value="{IDRECON}" />
+<input type="hidden" name="id_comm" value="{IDCOMM}" />
+<input type="hidden" name="modo" value="marcaenprocesoysigue"/>
+</form>
+
+
+<iframe class="oculto" name="pantallamuda" id="pantallamuda"></iframe>
+
+
+
+
+

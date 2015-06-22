@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/patTemplate/!svn/ver/426/trunk/patTemplate/OutputFilter
+END
+Gzip.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/patTemplate/!svn/ver/359/trunk/patTemplate/OutputFilter/Gzip.php
+END
+Tidy.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/patTemplate/!svn/ver/357/trunk/patTemplate/OutputFilter/Tidy.php
+END
+BBCode.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/patTemplate/!svn/ver/408/trunk/patTemplate/OutputFilter/BBCode.php
+END
+StripWhitespace.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/patTemplate/!svn/ver/417/trunk/patTemplate/OutputFilter/StripWhitespace.php
+END
+HighlightPhp.php
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/patTemplate/!svn/ver/378/trunk/patTemplate/OutputFilter/HighlightPhp.php
+END
+PdfLatex.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/patTemplate/!svn/ver/426/trunk/patTemplate/OutputFilter/PdfLatex.php
+END

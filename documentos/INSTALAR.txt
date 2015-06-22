@@ -1,0 +1,49 @@
+
+** Introducción ** 
+
+OCR2DATA esta diseñado para integrarse en procesos existentes, pero puede funcionar de manera independiente.
+
+
+** Instalación **
+
+Para instalarlo hay que descomprimir los ficheros del programa en una carpeta web del servidor, y ejecutar el sql que hay dentro del fichero basedatos1.sql.zip.  Este SQL creara las tablas necesarias, y pondra algunos datos de ejemplo para que podamos probar la instalación. 
+
+
+** Configuración **
+
+Tras haber ejecutado este SQL y haber descomprimido los ficheros, tenemos que editar el fichero config.php de la carpeta config en ocr2data.  
+
+Aqui ponemos los datos de nuestra base datos:
+	$global_host_db = "localhost";
+	$global_user_db = "root";
+	$global_pass_db = "";
+	$ges_database = "congen_anonima";
+
+Host, usuario, contraseña y nombre de la base de datos (originalmente congen_anonima, pero si necesitamos cambiar el nombre, tendriamos que reflejarlo en este fichero de configuración.
+
+Ademas hay que actualizar el siguiente fichero:
+	//Carpeta visible en web para vistas de documentos
+	$webdata = "/ocr2data_libre/ocr2data_data/web/";
+	
+Esta sera la carpeta donde se guardaran las imagenes de los documentos que se visualizan cuando se esta verificando un escaneo.	Este path es relativo al directorio raiz web. Si la carpeta que tenemos es /var/www/ocr2data_data/web/, entonces el path a poner aqui seria /ocr2data_data/web/.
+
+** Permisos **
+
+OCR2DATA necesita derechos de escritura y lectura en todas las carpetas de /ocr2data_data/ e hijas. Ademas, obviamente, el servidor web necesita acceso de lectura a la carpeta /ocr2data_data/web/ y la carpeta /ocr2data_data/scan/.  Si el programa no tiene acceso a estos directorios, mostrar mensajes de error al intentar hacer operaciones como importar trabajos, exportar documentos digitalizados,etc.
+
+** Gestión **
+
+OCR2DATA utiliza pero no llena las tablas 
+ data_clientes
+ data_direccionescliente
+ data_productos
+ 
+Estas tablas deben llenarse desde otros procesos con los nombres de clientes, direcciones y productos de nuestro negocio. La deteccion inteligente funciona buscando los clientes, direcciones o productos mas parecidos a los que tenemos en la base de datos, aproximando lo que ha detectado el OCR. Esto permite en algun caso devolver datos limpios e id's de base de datos. producto_id 813 en lugar de a lo mejor "Mesa de R0ble". Idealmente estas tablas tendran todos los productos y clientes, y serian actualizadas periodicamente por otro proceso.
+
+
+
+
+
+
+
+

@@ -1,0 +1,68 @@
+<h3 class="nonbreseccion">Lista Recon</h3>
+
+
+<script>
+
+function onLoadPageAlta(){
+    $("#cogerPrimero").focus();
+}
+
+</script>
+
+
+<div class="mensaje">
+	<patTemplate:var name="mensaje"  />
+</div>
+
+
+<center class="opciones"><a  id="cogerPrimero" href="lectura.php?modo=cargarprimeropendiente">
+<img src="img/forward.png" border='0' align="absmiddle" /> Cargar primer reconocimiento pendiente</a></center>
+
+
+<div id="listarecons">
+<table border="0" align="center" class="fr_table fullpage"  cellspacing='0'>
+    <tr class="fr_heads">
+    <td class="fr_head"></td>
+    <td class="fr_head">Estado</td>
+    <td class="fr_head"></td>
+    <td width="100" class="fr_head">Tipo</td>
+    <td width="100" class="fr_head">Imagen base</td>
+    <td  class="fr_head">TID</td>
+    <td  class="fr_head"></td>
+    </tr>
+	<patTemplate:tmpl name="lista">
+	<tr class="filarecon fr_{NN} fila_{NN}">
+    <td class="datodato">
+	<form action="modrecon.php" method="post">
+	<input type="hidden" name="recon_id" value='<patTemplate:var name="recon_id" modifier="html8"/>' />
+	<span class='botones'><input type="image" src="img/quick.gif" name="modo" value='eliminar' title="Delete <patTemplate:var name="recon_id"  />"></span>
+
+        </td>    
+    <td class="fr_1 datodato"><span class='estadorecon estadorecon_{ESTADO}'>{ESTADO}</span></td>
+    <td class="fr_11 datodato"><span class=''><patTemplate:var name="recon_id" modifier="html8" /></span></td>
+    <td class="fr_2 datodato">
+	<span class="nombretemplate">{NOMBRE}</span>
+   </td>
+    <td class="fr_3 datodato">
+    <span class=""><patTemplate:var name="imagenbase" modifier="html8"/></span>
+   </td>
+    <td  class="fr_4 datodato">
+    <span class=""><patTemplate:var name="template_id" /></span>
+   </td>
+
+    <td class="fr_5 datodato">
+       <a href='lectura.php?&amp;modo=inicia&amp;id_recon=<patTemplate:var name="recon_id" />'>editar</a>
+	</form>
+	</td>
+    </tr>    
+    <!-- <tr><td colspan="6" class="fr_cajadivisor"><div class="fr_divisor">&nbsp;</div></td></tr> -->
+	</patTemplate:tmpl>
+</table>
+
+
+
+
+
+</div>
+
+

@@ -1,0 +1,40 @@
+
+<h3 class="nonbreseccion">Lista templates</h3>
+
+<!--
+<form action="modtemplates.php" method="post">
+<input type="hidden" name="modo" value="alta" />
+<input type="text" name="nombre" value="prueba1" />
+<input type="submit" value="Alta template"/>
+</form>
+-->
+
+<div class="mensaje">
+	<patTemplate:var name="mensaje"  />
+</div>
+
+
+<div id="listarecons">
+<table border="0" align="center" class="fr_table fullpage"  cellspacing='0'>
+    <tr class="fr_heads">
+    <td class="fr_head"></td>
+    <td class="fr_head"></td>
+    <td class="fr_head">Nombre</td>
+    <td class="fr_head"></td>
+    </tr>
+	<patTemplate:tmpl name="lista">
+	<tr class="filarecon fila_{NN} fr_{NN}">
+	<td><form action="modtemplates.php" method="post">
+	<input type="hidden" name="template_id" value='<patTemplate:var name="template_id" />' />
+	<span class='botones'><input type="image" src="img/quick.gif" name="modo" value='eliminar'></span></td>
+    <td><span>{TEMPLATE_ID}</span></td>
+	<td><span><patTemplate:var name="nombre" modifier="html8" /></span></td>
+    <td><span><a href="modtemplates.php?id={TEMPLATE_ID}&amp;modo=edit">editar</a></span></td>
+	</form>
+	</tr>
+	</patTemplate:tmpl>
+</table>
+</div>
+
+
+

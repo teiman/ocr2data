@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/patTemplate/!svn/ver/480/trunk/patTemplate
+END
+Compiler.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/patTemplate/!svn/ver/206/trunk/patTemplate/Compiler.php
+END
+Stat.php
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/patTemplate/!svn/ver/423/trunk/patTemplate/Stat.php
+END
+Modifier.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/patTemplate/!svn/ver/219/trunk/patTemplate/Modifier.php
+END
+TemplateCache.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/patTemplate/!svn/ver/219/trunk/patTemplate/TemplateCache.php
+END
+Reader.php
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/patTemplate/!svn/ver/480/trunk/patTemplate/Reader.php
+END
+OutputCache.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/patTemplate/!svn/ver/219/trunk/patTemplate/OutputCache.php
+END
+InputFilter.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/patTemplate/!svn/ver/219/trunk/patTemplate/InputFilter.php
+END
+Dump.php
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/patTemplate/!svn/ver/219/trunk/patTemplate/Dump.php
+END
+Module.php
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/patTemplate/!svn/ver/219/trunk/patTemplate/Module.php
+END
+Function.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/patTemplate/!svn/ver/454/trunk/patTemplate/Function.php
+END
+OutputFilter.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/patTemplate/!svn/ver/219/trunk/patTemplate/OutputFilter.php
+END

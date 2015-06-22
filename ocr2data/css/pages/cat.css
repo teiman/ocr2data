@@ -1,0 +1,16 @@
+
+
+.contenido {
+	zheight: 390px;
+}
+
+
+.verdescargar a {
+  padding-right: 10px;
+}
+
+.verdescargar a.nobg:hover {
+  background-color: white;
+}
+
+

@@ -1,0 +1,169 @@
+<h3 class="nonbreseccion">Configuración</h3>
+
+<script>
+
+function onLoadPageAlta(){
+    //$("#cogerPrimero").focus();
+}
+
+</script>
+
+
+<div class="mensaje">
+    <patTemplate:var name="mensaje"  />
+</div>
+
+
+<!-- <center class="opciones"><a id="cogerPrimero" href="#alta"></a></center> -->
+
+<div id="listarecons">
+
+<div class="quenohacenfaltaenmodificar {QUENO}">
+
+<table border="0" align="center" class="fr_table fullpage"  cellspacing='0'>
+    <tr class="fr_heads">
+    <td class="fr_head">id</td>
+    <td class="fr_head">Parametro</td>
+    <td width="200" class="fr_head">Valor</td>
+    <td class="fr_head"></td>
+    </tr>
+    <patTemplate:tmpl name="lista">
+    <tr class="filarecon fila_{NN}">
+    <td class="fr_0 datodato"><patTemplate:var name="id" modifier="html8"/></td>
+    <td class="fr_1 datodato"><patTemplate:var name="name" modifier="html8"/></td>
+    <td class="fr_2 datodato"><nobr><patTemplate:var name="value" modifier="html8"/></nobr></td>
+    <td class="fr_3 datodato"><a href="modconfig.php?modo=modificar&id=<patTemplate:var name="id" modifier="html8"/>">editar</a></td>
+    </tr>    
+    <!-- <tr><td colspan="6" class="fr_cajadivisor"><div class="fr_divisor">&nbsp;</div></td></tr> -->
+    </patTemplate:tmpl>
+</table>
+
+</div>
+
+<div class="{QUESI}">
+
+<form action="modconfig.php" method="post">
+<input type="hidden" name="modo" value="guardarcambios" />
+
+<input type="hidden" name="id_system_param" value="<patTemplate:var name="id_system_param" modifier="html8"/>" />
+
+
+
+
+<h3>Modificar</h3>
+<table>
+<tr><td><label>Nombre:</label></td>
+    <td><input value="<patTemplate:var name="system_param_title" modifier="html8"/>" type="text" name="system_param_title" style="width: 20em" /><br></td></tr>
+<tr><td><label>Valor inicial:</label></td>
+    <td><input value="<patTemplate:var name="system_param_value" modifier="html8"/>" type="text" name="system_param_value"  style="width: 50em"></td></tr>
+<tr><td><label>&nbsp;</label></td><td><input type="submit" value="Modificar"><input type="button" onclick="document.location = 'modconfig.php'" value="Cancelar" /></td></tr>
+</table>
+</form>
+
+</div>
+
+
+<div class="quenohacenfaltaenmodificar  {QUENO}">
+
+<a name="alta"></a>
+<h3>Alta</h3>
+<form action="modconfig.php" method="post">
+<input type="hidden" name="modo" value="guardaralta">
+
+<table>
+<tr><td class="headdato"><label>Nombre:</label></td><td class="datodato"><input type="text" name="system_param_title" style="width: 20em" /><br></td></tr>
+<tr><td class="headdato"><label>Valor inicial:</label></td><td class="datodato"><input type="text" name="system_param_value"  style="width: 50em"></td></tr>
+<tr><td class="headdato"><label>&nbsp;</label></td><td class="datodato"><input class="defaultoboton" type="submit" value="Alta" />
+<input  class="defaultoboton" type="button" onclick="document.location = 'modconfig.php'" value="Cancelar" />
+</td></tr>
+</table>
+</form>
+
+</div>
+
+
+
+</div>
+
+
+<style>
+
+
+label {
+
+ width: 100px;
+}
+
+
+.opciones {
+ margin: 8px;
+ border: 1px solid #ccc;
+ padding:4px;
+}
+
+.fr_head {
+ background-color: #ccc;
+ padding-left:4px;
+ padding-right:8px;
+}
+
+
+
+.fr_cajadivisor,.fr_cajadivisor *  {
+ font-size: 2px; height: 2px;
+}
+
+.fr_divisor{
+  border-top:1px solid #ccc
+}
+
+    #listarecons li a {
+        display: block;
+        padding: 5px 5px 5px 0.5em;
+        border-left: 10px solid #1958b7;
+        border-right: 10px solid #508fc4;
+        background-color: #2175bc;
+        color: #fff;
+        text-decoration: none;
+        width: 100%;
+        }
+
+    html>body #listarecons li a {
+        width: auto;
+        }
+
+    #listarecons li a:hover {
+        border-left: 10px solid #1c64d1;
+        border-right: 10px solid #5ba3e0;
+        background-color: #2586d7;
+        color: #fff;
+        }
+
+
+
+.estadorecon  {
+
+ text-transform: uppercase;
+ font-weight:bold
+ padding-left: 2px;
+ padding-right: 2px;
+ width: 80px;
+ display: inline-block;
+ 
+}
+
+.estadorecon_pendiente {
+  color: orange;
+  border: 1px solid orange; 
+  padding-left:4px;
+}
+
+
+
+.estadorecon_tramitado {
+  color: green;
+  border: 1px solid green; 
+padding-left:4px;
+}
+
+</style>

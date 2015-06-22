@@ -1,0 +1,30 @@
+
+
+.output {
+ border: 1px solid gray;
+ padding: 4px;
+ margin: 2px;
+ max-height: 90px;
+ overflow: scroll;
+}
+
+.output .stderr {
+ color: #700;
+}
+
+.output, .output * {
+ font-size: 11px;
+ font-family: Terminal, Mono;
+}
+
+
+.oculto {
+	display: none;
+}
+
+.marcas {
+
+	font-size: 12px;
+}
+
+  #canvas { height: 500px; background: white; }

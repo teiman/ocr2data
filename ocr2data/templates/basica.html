@@ -1,0 +1,93 @@
+<patTemplate:tmpl name="page">
+<html>
+<head>
+	<patTemplate:tmpl name="headers" src="headers.html" autoload="on" parse="on"/>
+
+	<script type="text/javascript">
+
+	var validator;
+
+	var Global = {};
+
+	$(function() {
+
+		setTimeout(function(){
+			if (typeof onLoadPageAlta  == 'function'){
+				onLoadPageAlta();
+			}
+		},0);
+	});
+
+
+
+
+	</script>
+
+<!--[if ie]>
+<style type="text/css">
+
+body  {
+	text-align: center;
+}
+
+.navegador {
+	width: 100%;
+}
+
+
+</style>
+<![endif]-->
+
+<style type='text/css' media='print'>
+
+input {
+	visibility: hidden;
+}
+
+</style>
+
+<style>
+<patTemplate:tmpl name="cssgenerico" src="css_generico.css" autoload="on" parse="off"/>
+</style>
+
+</head>
+<body>
+
+<patTemplate:tmpl name="cabeza" src="cabeza.html" autoload="on" parse="on"/>
+
+
+
+<patTemplate:tmpl name="menu" src="menu.htm" autoload="on" parse="on"/>
+
+
+<!-- root -->
+<div id="root">
+
+<div id="contenedor">
+
+<div id="cajasolapa">
+<!-- caja solapa -->
+<patTemplate:tmpl name="cuerpo" src="vacio.txt" autoload="off" parse="on"/>
+<!-- /caja solapa -->
+</div>
+
+
+</div>
+
+</div>
+<!-- /root -->
+
+<patTemplate:tmpl name="copyright" src="legal.html" autoload="on" parse="off"/>
+
+
+<div id="extracontainer">
+</div>
+
+
+</body>
+
+
+
+
+</html>
+</patTemplate:tmpl>

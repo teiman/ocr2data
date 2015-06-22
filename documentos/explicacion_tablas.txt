@@ -1,0 +1,54 @@
+** Tablas de OCR2DATA**
+
+ data_clientes
+ data_direccionescliente
+ data_productos
+ imagen
+ nb_boxes
+ nb_categories
+ nb_references
+ nb_wordfreqs
+ recon
+ recon_ciertos
+ regiones
+ regiones_recon
+ system_param
+ templates
+ 
+** Información detallada **
+
+Tablas de datos:
+ data_clientes
+ data_direccionescliente
+ data_productos
+  
+Estas tablas deben llenarse desde otros procesos con los nombres de clientes, direcciones y productos de nuestro negocio. La deteccion inteligente funciona buscando los clientes, direcciones o productos mas parecidos a los que tenemos en la base de datos, aproximando lo que ha detectado el OCR. Esto permite en algun caso devolver datos limpios e id's de base de datos. producto_id 813 en lugar de a lo mejor "Mesa de R0ble". Idealmente estas tablas tendran todos los productos y clientes, y serian actualizadas periodicamente por otro proceso.
+  
+ nb_boxes
+ nb_categories
+ nb_references
+ nb_wordfreqs
+ 
+Estas tablas contienen las clasificaciones mediante filtros bayesianos. Van gestionadas por el programa y plugins.  
+ 
+ system_param
+ 
+Tabla principal de configuración de la aplicación. Las claves de configuración principales del programa empiezan por ocr2data., las de plugins por el nombre del plugin. Normalmente se modifica esta tabla mediante su interface web.
+  
+ recon
+Tabla con los reconocimientos. Un reconocimiento representa un documento que queremos digitalizar. Guardamos el id_comm que sera el identificador del sistema externo (CRM, RMS, etc..) 
+
+ regiones 
+ templates
+ imagen
+
+Tablas para el trabajo de las templates. Distintos documentos pueden utilizar la misma template. Por ejemplo si estamos procesando facturas de un mismo cliente que nos las emite siempre utilizando el mismo formato general. Cada template se compone de varias regiones y utiliza una imagen. 
+
+
+ 
+ recon_ciertos
+ regiones_recon
+Representan la "salida" del OCR. Se guardan las regiones reconocidas, con su probabilidad de error, etc.
+Un plugin de exportacion de base de datos leeria de aqui para escribir en otra tabla. Una aplicacion externa no deberia leer de aqui directamente, porque el formato puede cambiar, una aplicación externa leeria de lo que le informa el plugin en la tabla creada por el plugin, o mediante ficheros. El plugin ini que se incluye de ejemplo produce "documentos ini" con los datos de cada reconocimiento. 
+ 
+ 

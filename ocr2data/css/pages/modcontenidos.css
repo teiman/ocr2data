@@ -1,0 +1,90 @@
+
+/* ------------- listado contenidos ---------------- */
+
+
+.listadocontenidos th {
+	color: #50606d;
+	background-color: #CDD2D8;
+	font-size: 11px;
+	font-weight: bold;
+	font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
+
+	padding-left: 5px;
+	text-transform: uppercase;
+}
+
+.listadocontenidos td {
+	border-left: 1px solid #A5AFB8;
+	border-right: 1px solid #A5AFB8;
+	border-top: 1px solid #A5AFB8;
+	padding-bottom:2px;
+	padding-top: 2px;
+}
+
+.listadocontenidos td a {
+	color: #73787E;
+	text-decoration: none;
+	font-size: 11px;
+	font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
+}
+
+.listadocontenidos td a:hover {
+	text-decoration: underline;
+}
+
+
+.listadocontenidos td {
+	background-color: #F8FCFD;
+	padding-left: 22px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+.listadocontenidos {
+	border:  1px solid #A5AFB8;
+}
+
+
+span.tipo  {
+ font-size: 12px;
+}
+
+.opcionesradio ,.opcionesradio * {
+	font-size: 12px;
+}
+
+
+/* -------------- */
+
+
+td .tipo {
+ font-size: 12px;
+ text-align: right;
+ padding-right: 10px;
+ 
+}
+
+
+
+
+.descripcion {
+ width: 100%;
+}
+
+
+/* --- */
+
+#cajanombrearchivo {
+  border:2px solid #ccc;
+  width: 90%;
+  padding:8px;
+}
+
+.tituloform {
+
+  padding-bottom: 8px;
+
+
+}
+
+
